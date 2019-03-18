@@ -1,0 +1,35 @@
+AC_INIT(configure.in, 1.0)
+
+AC_CANONICAL_HOST
+
+
+AC_PROG_CXX(cxx CC g++)
+
+
+AM_INIT_AUTOMAKE (jseb,1.00)
+
+AC_PROG_INSTALL
+
+AC_PROG_LIBTOOL
+
+CXXFLAGS=" -g -O2"
+JUNGO_MAIN="/export/software/WinVer1260/WinDriver"
+RCDAQ_MAIN="/home/phnxrc/desmond/daq/rcdaq/digreader"
+RCDAQ_LIB="/home/phnxrc/softwarerepo/install/lib"
+RCDAQ_INC="/home/phnxrc/softwarerepo/install/include"
+DCM2_INC="/home/phnxrc/desmond/daq/install/include"
+
+ONLINE_BASE=/export/software/Linux.3.10.0-693.2.2.el7.x86_64
+MAIN_LDFLAGS="-L${ONLINE_BASE}/lib"
+
+AC_SUBST(JUNGO_MAIN)
+AC_SUBST(RCDAQ_MAIN)
+AC_SUBST(ONLINE_BASE)
+AC_SUBST(MAIN_LDFLAGS)
+AC_SUBST(RCDAQ_LIB)
+AC_SUBST(RCDAQ_INC)
+AC_SUBST(DCM2_INC)
+
+
+AC_OUTPUT(Makefile)
+
